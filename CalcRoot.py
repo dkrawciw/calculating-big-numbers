@@ -1,4 +1,5 @@
 from math import factorial
+from time import time
 
 class CalcRoot():
     def __init__(self, num, power):
@@ -69,6 +70,8 @@ if __name__ == "__main__":
 
         power = input("Power> ")
         testRoot = CalcRoot(int( ans ), int( power ))
+        startTime = time()
         testRoot.setCenter()
         print(f"Center: {testRoot.getCenter()}")
         print(f"Root: {testRoot.getRoot(5)}")
+        print(f"Time Spent: {(time() - startTime) * 1000} ms")
