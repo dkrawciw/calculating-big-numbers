@@ -2,8 +2,8 @@ class CalcSquareRoot():
     def __init__(self, num):
         self.squaredNum = num
 
-        self.center = 0
-        self.sqrtCenter = 0
+        self.center = 1
+        self.sqrtCenter = 1
 
         self.orderConstants = []
 
@@ -19,7 +19,7 @@ class CalcSquareRoot():
     @staticmethod
     def calculateSquaredNumbers(filename, maxNum):
         squaredNums = []
-        for currNum in range(maxNum):
+        for currNum in range(1,maxNum):
             squaredNums.append( str(currNum ** 2) + "," + str(currNum) + "\n")
 
         centerFile = open(filename, 'w')
@@ -42,7 +42,7 @@ class CalcSquareRoot():
                 centerPair = currLine.split(",")
                 centerList[ int( centerPair[0] ) ] = int( centerPair[1] )
 
-        newCenter = 0
+        newCenter = 1
         for squaredVal in centerList.keys():
             if abs( squaredVal - self.squaredNum ) < abs( newCenter - self.squaredNum ):
                 newCenter = squaredVal
