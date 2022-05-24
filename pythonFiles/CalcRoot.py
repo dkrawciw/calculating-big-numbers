@@ -73,5 +73,5 @@ if __name__ == "__main__":
         startTime = time()
         testRoot.setCenter()
         print(f"Center: {testRoot.getCenter()}")
-        print(f"Root: {testRoot.getRoot(5)}")
+        print(f"Root: {testRoot.getRoot(10)}")
         print(f"Time Spent: {(time() - startTime) * 1000} ms")
